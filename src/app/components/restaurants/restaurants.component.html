@@ -1,0 +1,40 @@
+<!-- Restaurant Component -->
+<div class="container">
+  <!-- location_template -->
+  <div class="location_wrap">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Restaurant Finder</h1>
+        </div>
+        <div class="col-md-6">
+          <div class="location geo_locator_wrap">
+              <a href="javascript:;" (click)="geoLocator()" class="btn btn-primary"><i class="fas fa-map-marker-alt"></i> Use my current location</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="location city_select_wrap">
+              <h1>Select your city</h1>
+              <ul>
+                <li>
+                  <a href="javascript:;" class="btn btn-primary" (click)="locationData('bangalore')">Bangalore</a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="btn btn-primary" (click)="locationData('mumbai')">Mumbai</a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="btn btn-primary" (click)="locationData('hyderabad')">Hyderabad</a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="btn btn-primary" (click)="locationData('delhi')">Delhi</a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="btn btn-primary" (click)="locationData('pune')">Pune</a>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </div>
+  </div>
+  <!-- ends -->
+</div>
+<!-- ends -->

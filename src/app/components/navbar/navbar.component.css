@@ -1,0 +1,17 @@
+nav.navbar{
+    background-color: #4B3DC3 !important;
+}
+.navbar a, .navbar ul li a{
+    color: #fff;
+}
+.navbar .btn-outline-success{
+    color: #fff;
+    border-color:#fff;
+    border-radius: 30px;
+    border: 2px solid;
+}
+.navbar input{
+    padding: 9px;
+    border-radius: 30px;
+    background-color: #fff;
+}

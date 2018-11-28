@@ -1,0 +1,43 @@
+<!-- Navbar Component -->
+<app-navbar></app-navbar>
+<!-- ends -->
+<!-- Restaurant details template -->
+<div class="container">
+  <div class="details_wrap">
+      <div class="card mb-3">
+          <img class="card-img-top" [src]=banner_img alt="Background image">
+          <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <p class="card-text"><i class="fas fa-star"></i> {{rating}} | {{review_count}} reviews</p>
+            <hr>
+            <p class="card-text">Cuisines : {{cuisines}}</p>
+            <p class="card-text">Cost for two : ₹ {{cost_for_two}}</p>
+            <p class="card-text">Address : {{address}}</p>
+            <p class="card-text">Menu Link : <a [href]=menu_link target="_blank">link</a> | Photos Link : <a [href]=photos_link target="_blank">link</a></p>
+            <div class="btn_wrap">
+              <button type="button" class="btn btn-success" (click)="likeHandler()">Like {{like}}</button>
+              <button type="button" class="btn btn-danger" (click)="dislikeHandler()">Dislike {{dislike}}</button>
+            </div>
+            <hr>
+            <h5>Reviews ({{reviews_shown}})</h5>
+            <div class="review_wrap">
+              <div class="row" *ngFor="let review of reviews">
+                <div class="col-md-1">
+                  <div class="img_wrap">
+                    <img [src]=review.review.user.profile_image alt="logo img">
+                  </div>
+                </div>
+                <div class="col-md-11">
+                  <div class="review_content">
+                    <h6>{{review.review.user.name}} | <i class="far fa-star"></i> {{review.review.rating}}</h6>
+                    <p class="card-text">{{review.review.rating_text}}</p>
+                    <p class="card-text">{{review.review.review_text}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+</div>
+<!-- ends -->

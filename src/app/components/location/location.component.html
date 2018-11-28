@@ -1,0 +1,22 @@
+<!-- Navbar -->
+<app-navbar></app-navbar>
+<!-- ends -->
+<!-- Restaurant_template -->
+<div class="container">
+  <div class="restaurant_wrap">
+    <div class="row">
+      <h1>Showing restaurants in {{locality}}, {{city}}</h1>
+        <div class="col-sm-6 col-md-4" *ngFor="let restaurant of restaurants; let i=index" (click)="detailedRestaurants(i,$event)">
+            <div class="card">
+                <img class="card-img-top" [src]=restaurant.restaurant.thumb alt="No Image Available">
+                <div class="card-body">
+                  <h5 class="card-title">{{restaurant.restaurant.name}}</h5>
+                  <p class="card-text">Cuisine: {{restaurant.restaurant.cuisines}}</p>
+                  <p class="card-text"><i class="fas fa-star"></i> {{restaurant.restaurant.user_rating.aggregate_rating}}</p>
+                </div>
+              </div>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- ends -->
